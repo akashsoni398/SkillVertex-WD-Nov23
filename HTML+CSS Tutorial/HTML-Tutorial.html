@@ -1,0 +1,400 @@
+
+    
+</body>
+</html><!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Tutorial</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="This is our first website"/>
+        <link rel="stylesheet" href="./external.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="icon" type="image/x-icon" href="./favicon-32x32.png">
+        <script src="./external.js"></script>
+        <style>
+            
+            /* css syntax
+            
+            selector {
+                property: value;
+            }
+
+            */
+
+            /* id selector (#) */
+                #para {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+            /* class selector (.) */
+                .textbox {
+                    border: 3px solid rgb(0, 32, 128);
+                }
+            
+            /* tag selector (tagname) */
+                body {
+                    background-color: aquamarine;
+                }
+            
+            /* grouping selectors (,) */
+                td,th,table {
+                    border: 2px dashed yellow;
+                }
+
+            /* universal selector (*) */
+                table * {
+                    color: white;
+                }
+
+            /* attribute selector - tagname[attribute=value] */
+                button[type="submit"] {
+                    background-color: blueviolet;
+                }
+
+                section * {
+                    border: 3px solid black;
+                    background-color: white;
+                    margin: 10px;
+                    padding: 10px;
+                }
+
+            /* relational selectors */
+                /* descendent selector (<space>) */
+                    #steve div {
+                        background-color: rgba(134, 53, 134, 0.5);
+                    }
+
+                /* child selector (>) */
+                    #rohan>div {
+                        background-color: cyan;
+                    }
+
+                /* sibling selector (~) - all siblings after */
+                    #ella~div {
+                        background-color: #a700df7f;
+                    }
+
+                /* adjacent selector (+) - one sibling after */
+                    #lee+div {
+                        background-color: lime;
+                    }
+
+
+            /* 
+            values in css:
+                    1. Text values - align,bold,red,solid,...,etc
+                    2. Numerical values
+                        2.1 Absolute values - 3cm,10px,1in 
+                        2.2 Relative values - 10%,1rem,1vh,1vw,1em
+                    3. Colour values
+                        3.1 text
+                        3.2 rgb rgba
+                        3.3 hsl
+                        3.4 hwb
+                        3.5 hex          
+            */
+                
+        </style>
+        <script>
+            // javascript content
+        </script>
+    </head>
+    <body>
+        <!-- HTML comment -->
+
+        <div id="box">
+            <div id="item"></div>
+        </div>
+
+        <section id="relation">
+            <div id="john">
+                <div id="steve">
+                    <div id="lee"></div>
+                    <div id="bob"></div>
+                    <div id="ella"></div>
+                    <div id="emma"></div>
+                </div>
+                <div id="rohan">
+                    <div id="sam"></div>
+                    <div id="rahul">
+                        <div id="sal"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- basic tags -->
+            <p id="para">Hello World</p>
+            <p>THis is HTML</p>
+            <div>This is a div tag</div>
+            
+            <span>This is a <br />span tag</span>
+            dfsdlfjsdfds fds  s s     sdfsfsdf     dfsdlfjsdfds
+
+            sdfdsfsdf
+
+            sdfdsfsdfssd
+            fds df  sdfdsfdsf
+            <pre>dfsdlfjsdfds fds  s s     sdfsfsdf     dfsdlfjsdfds
+
+                sdfdsfsdf
+    
+                sdfdsfsdfssd
+                fds df  sdfdsfdsf</pre>
+            
+            <a href="https://www.google.com" target="">Google Homepage</a>
+            
+            <br><br><hr><br><br>
+
+        <!-- semantic tags -->
+            <header></header>
+            <nav></nav>
+            <section></section>
+            <main></main>
+            <aside></aside>
+            <article></article>
+            <footer></footer>
+            <time></time>
+
+            <br><br><hr><br><br>
+
+
+        <!-- multimedia tags -->
+        <audio controls>
+            <source src="./samjhawan-arijit.mp3" />
+        </audio>
+        <video controls>
+            <source src="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4" />
+        </video>
+        <img srcset="url,url2,url3" src="https://static.semrush.com/blog/uploads/media/cc/85/cc85d452a743e27f68d426df35e4da7d/original.png" height="400px" />
+
+        <embed width="560" height="315" src="https://www.youtube.com/embed/ewZ_YWbIWXI?si=pWTQ8csm70xK2pSY" />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ewZ_YWbIWXI?si=Zse2ayaktn3Bzg-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <a href="https://www.google.com"><img src="./favicon-32x32.png" /></a>
+
+        <br><br><hr><br><br>
+
+
+        <!-- formatting tags -->
+        <b>Bold</b><i>Italic</i><u>Underline</u><br>
+        <strong>Strong</strong><em>Emphasis</em>
+        
+        <br>
+
+        <del>Delete</del><ins>Insert</ins>
+
+        <br>
+
+        2<sup>2</sup><br>
+        <sub>3</sub>√27
+
+        <br>
+
+        <marquee direction="up" height="300px"><center>HTML stands for <mark>Hypertext Markup Language</mark></center></marquee>
+        <br><br><hr><br><br>
+
+        <!-- heading tags -->
+        <h1>Heading Level 1</h1>
+        <h2>Heading Level 2</h2>
+        <h3>Heading Level 3</h3>
+        <h4>Heading Level 4</h4>
+        <h5>Heading Level 5</h5>
+        <h6>Heading Level 6</h6>
+
+        <br><br><hr><br><br>
+
+        <!-- list tags -->
+        <ol type="i">
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ol>
+
+        <ul type="disc">
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+
+        <dl>
+            <dt>HTML5 video</dt>
+            <dd>The HTML5 specification introduced the video element for the purpose of playing videos, partially replacing the object element. </dd>
+        </dl>
+
+
+        <br><br><hr><br><br>
+
+
+        <!-- table tags -->
+        <table border="1px">
+            <caption>Student Details</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">Student Name</th>
+                    <th>Address</th>
+                    <th>Phone No.</th>
+                    <th>Email Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Akash Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Akash Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Akash Soni</td>
+                    <td>Bangalore</td>
+                    <td>534534245</td>
+                    <td>akash@gmail.com</td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+
+
+        <table>
+            <caption>Employee Information</caption>
+
+            <colgroup>
+                <col span="2" style="background-color: cyan;" />
+                <col span="2" />
+                <col span='3' style="background-color: aquamarine;" />
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th colspan="2">Name</th>
+                    <th rowspan="2">Email Address</th>
+                    <th rowspan="2">Mob</th>
+                    <th colspan="3">Address</th>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Line 1</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Akash</td>
+                <td>Soni</td>
+                <td>akash@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>xyz</td>
+                <td>Bangalore</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>Soumya</td>
+                <td>Agarwal</td>
+                <td>soumya@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>abc</td>
+                <td>Indore</td>
+                <td>Madhya Pradesh</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>Soni</td>
+                <td>akash@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>xyz</td>
+                <td>Bangalore</td>
+                <td>Karnataka</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>Soni</td>
+                <td>akash@gmail.com</td>
+                <td>+91 43242 42544</td>
+                <td>xyz</td>
+                <td>Bangalore</td>
+                <td>Karnataka</td>
+            </tr>
+        </table>
+
+        <br><br><hr><br><br>
+
+        <!-- form tags -->
+        
+        <fieldset>
+            <legend>Form Tags:</legend>
+            <form method="post" action="welcome.php">      
+                <label for="uname">Enter your name:</label>
+                <input type="text" name="uname" placeholder="e.g., John Doe" />
+                <textarea rows="10" cols="50"></textarea>
+                <button type="submit">Button</button>
+            </form>
+        </fieldset>
+
+
+        <form>
+            <fieldset>
+                <legend>HTML Input Tags:</legend>
+                
+                <!--text fields-->
+                <input class="textbox" type="text" name="name_inp" id="name_txt" class="textbox" value="Hello" required/>
+                <input class="textbox" type="url" placeholder="Enter a URL"/>
+                <input class="textbox" type="search" />
+                <input class="textbox" type="password" />
+                <input class="textbox" id="number-input" type="number" />
+                <input class="textbox" id="email-input" type="email" />
+                <textarea class="textbox" rows="10" cols="50"></textarea><br><br>
+    
+                <!-- date/time -->
+                
+                <input id="date-picker" type="date" name="date">
+                <input type="datetime-local">
+                <input type="datetime" >
+                <input type="month">
+                <input type="week">
+                <input type="time">
+                <br><br>
+    
+                <!--check box-->
+                <input name="chk1" type="checkbox"><label>Option 1</label>
+                <input name="chk2" type="checkbox"><label>Option 2</label>
+    
+                <!-- radiobtn -->
+                <input name="gender" type="radio" value="M"><label>Male</label>
+                <input name="gender" type="radio" value="female"><label>Female</label>
+                <input name="gender" type="radio" value="others"><label>Others</label>
+    
+                <!-- selectors -->
+                <input type="color" name="color">
+                <input type="file">
+                <input type="image" src="list.png" alt="Submit" width="48" height="48">
+                <input type="range" name="range" min="0" max="10">
+    
+                <input type="button" value="CLICK" />
+                <input type="submit" value="SUBMIT"/>
+                <input type="reset" />
+    
+                <button type="submit">Submit LOGIN</button>
+                <button type="menu">MENU BUTTON</button>
+                <button type="button">Button</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+        <br><br><hr><br><br>
+    </body>
+</html>
