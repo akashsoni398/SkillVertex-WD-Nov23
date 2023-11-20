@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mucy - Music Streaming</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        #container {
+            background-color: #29263f;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav {
+            background-color: #2f2b45;
+            height: 100vh;
+            padding: 10px 30px;
+        }
+        nav #branding img {
+            width: 150px;
+            margin: 10px;
+
+        }
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color:#1d1b2d;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        
+        <nav>
+            <div id="branding">
+                <img src="./assets/logo.png" width="150px"/>
+            </div>
+            <div id="menu">
+                <h5>MENU</h5>
+                <li><img /><a href="">Explore</a></li>
+                <li><img /><a href="">Genres</a></li>
+                <li><img /><a href="">Albums</a></li>
+                <li><img /><a href="">Artists</a></li>
+            </div>
+            <div id="library">
+                <h5>LIBRARY</h5>
+                <li><img /><a href="">Recent</a></li>
+                <li><img /><a href="">Albums</a></li>
+                <li><img /><a href="">Favourites</a></li>
+            </div>
+            <div id="playlist">
+                <h5>PLAYLIST</h5>
+                <li><img /><a href="">Good vibes</a></li>
+                <li><img /><a href="">best Jazz</a></li>
+                <li><img /><a href="">Party</a></li>
+                <button><img>Create New</button>
+            </div>
+        </nav>
+
+        <section id="main-content">
+            
+            <header>
+                <div id="menubar">
+                    <li><a href="">Music</a></li>
+                    <li><a href="">Pools</a></li>
+                    <li><a href="">NFTs</a></li>
+                    <li><a href="">Launchpad</a></li>
+                    <li><a href="">Work with us</a></li>
+                </div>
+                <div id="user-area">
+                    <div id="user-info">
+                        <span>Username</span>
+                        <div id="user-dropdown">
+                            <button id="dropdown-btn">userid<img /></button>
+                            <div id="dropdown-content">
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Account</a></li>
+                                <li><a href="">Settings</a></li>
+                                <li><a href="">Logout</a></li>
+                            </div>
+                        </div>
+                        <img id="user-image">
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="music-page">
+                    
+                    <hero>
+                        <img />
+                        <h3>Trending new hits</h3>
+                        <h1>Break the Heart</h1>
+                        <h2>Dua Lipa</h2>
+                        <div id="cta">
+                            <button>Listen Now</button>
+                            <button><img /></button>
+                        </div>
+                    </hero>
+
+                    <div class="section-list">
+                        <h4>Top Artists</h4>
+                        <a href="">See all</a>
+                        <div class="list-items">
+                            <div id="list-item">
+                                <img />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-list">
+                        <h4>New Hits</h4>
+                        <a href="">See all</a>
+                        <div class="list-items">
+                            <div id="list-item">
+                                <img />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+                <aside>
+                    <h4>Hot Boosts</h4>
+                    <div class="song-profile"></div>
+                    <div class="song-profile"></div>
+                    <div class="song-profile"></div>
+                    <div class="song-profile"></div>
+                    <div class="song-profile"></div>
+                    <div class="song-profile"></div>
+                    <div class="song-profile"></div>
+                </aside>
+            </main>
+        </section>
+    </section>
+    <footer>
+        <section id="song-profile">
+            <img />
+            <p>Song Name</p>
+            <span>Artist Name</span>
+        </section>
+        <section id="music-player">
+            <audio controls></audio>
+        </section>
+        <section id="controls">
+            <img />
+            <input type="range">
+        </section>
+    </footer>
+</body>
+</html>
