@@ -9,8 +9,14 @@
         * {
             margin: 0;
             padding: 0;
-            color: white;
+            color: white;font-family: Arial, Helvetica, sans-serif;
         }
+
+        h5 {
+            color: #7873a7;
+            padding: 5px;
+        }
+
 
         #container {
             background-color: #29263f;
@@ -20,13 +26,107 @@
 
         nav {
             background-color: #2f2b45;
-            height: 100vh;
-            padding: 10px 30px;
+            height: 95vh;
+            padding: 10px 0px;
         }
         nav #branding img {
             width: 150px;
-            margin: 10px;
+            margin: 10px 30px;
+        }
+        nav #menu,nav #library,nav #playlist {
+            margin: 20px 0px 20px 30px;
+        }
+        nav #menu li,nav #library li,nav #playlist li {
+            list-style-type: none;
+            padding: 10px;
+            margin-left: -20px;
+            padding-left: 30px;
+        }
+        nav li.active {
+            border-right: 4px solid white;
+            background-image: linear-gradient(to right,#3f3c4d,#2f2b45 );
+        }
+        nav #menu a,nav #library a,nav #playlist a {
+            padding-left: 15px;
+            text-decoration: none; 
+        }
+        nav #playlist button {
+            border: 3px dashed white;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #main-content {
+            width: 100vw;
+        }
+        header {
+            border-bottom: 2px solid #2f2b45;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header #menubar {
+            display: flex;
+            flex-direction: row;
+        }
+        header #menubar li {
+            list-style-type: none;
+            justify-content: space-between;
+            padding: 0px 30px;
+        }
+        header #menubar a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 30px 0px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        header #menubar li.active a {
+            border-bottom: 4px solid white;
+        }
+        header #userarea {
+            text-align: right;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        header #userinfo {
+            position: relative;
+        }
+        header #dropdown-btn {
+            background-color: transparent;
+            border: none;
+            color: #7873a7;
+            cursor: pointer;
+        }
+        #user-dropdown:hover #dropdown-content {
+            display: block;
+        }
+        header #dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #7873a7;
+            border-radius:15px ;
+            padding: 5px;
+        }
+        header #dropdown-content li {
+            list-style-type: none;
 
+        }
+        header #dropdown-content a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+        #dropdown-content a:hover {
+            background-color: #9591bd;
+            border-radius: 15px;
+            color: #3f3c4d;
         }
         footer {
             width: 100%;
@@ -38,6 +138,80 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        main #music-page {
+            height: 80vh;
+        }
+        main aside {
+            height: 80vh;
+            overflow-y: scroll;
+            border: 2px solid #2f2b45;
+            
+        }
+        main aside #song-list {
+            padding: 30px;
+        }
+        main aside #song-list-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .song-profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 40px;
+        }
+        .song-profile img {
+            height: 40px; 
+            width: 40px;
+            border-radius: 7px;
+            margin: 10px;
+        }
+        .song-profile p {
+            color: #c5c2e1;
+            font-size: 15px;
+        }
+        .song-profile span {
+            color:#9591bd;
+            font-size: 10px;
+        }
+        main aside::-webkit-scrollbar {
+            width: 7px;
+        }
+        #play-btn #circle {
+            display: block;
+            background-color:#7873a7;
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+            
+            position: relative;
+        }
+        #play-btn #circle i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%,-45%);
+        }
+
+        /* Track */
+        main aside::-webkit-scrollbar-track {
+            
+            border-radius: 10px;
+        }
+        
+        /* Handle */
+        main aside::-webkit-scrollbar-thumb {
+            background:#7873a7;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -49,22 +223,22 @@
             </div>
             <div id="menu">
                 <h5>MENU</h5>
-                <li><img /><a href="">Explore</a></li>
-                <li><img /><a href="">Genres</a></li>
-                <li><img /><a href="">Albums</a></li>
-                <li><img /><a href="">Artists</a></li>
+                <li class="active"><i class="fa-solid fa-music"></i><a href="">Explore</a></li>
+                <li><i class="fa-solid fa-circle-play"></i><a href="">Genres</a></li>
+                <li><i class="fa-solid fa-record-vinyl"></i><a href="">Albums</a></li>
+                <li><i class="fa-solid fa-microphone"></i><a href="">Artists</a></li>
             </div>
             <div id="library">
                 <h5>LIBRARY</h5>
-                <li><img /><a href="">Recent</a></li>
-                <li><img /><a href="">Albums</a></li>
-                <li><img /><a href="">Favourites</a></li>
+                <li><i class="fa-solid fa-clock"></i><a href="">Recent</a></li>
+                <li><i class="fa-solid fa-circle-play"></i><a href="">Albums</a></li>
+                <li><i class="fa-solid fa-heart"></i><a href="">Favourites</a></li>
             </div>
             <div id="playlist">
                 <h5>PLAYLIST</h5>
-                <li><img /><a href="">Good vibes</a></li>
-                <li><img /><a href="">best Jazz</a></li>
-                <li><img /><a href="">Party</a></li>
+                <li><i class="fa-solid fa-guitar"></i><a href="">Good vibes</a></li>
+                <li><i class="fa-solid fa-guitar"></i><a href="">best Jazz</a></li>
+                <li><i class="fa-solid fa-guitar"></i><a href="">Party</a></li>
                 <button><img>Create New</button>
             </div>
         </nav>
@@ -73,17 +247,17 @@
             
             <header>
                 <div id="menubar">
-                    <li><a href="">Music</a></li>
+                    <li class="active"><a href="">Music</a></li>
                     <li><a href="">Pools</a></li>
                     <li><a href="">NFTs</a></li>
                     <li><a href="">Launchpad</a></li>
                     <li><a href="">Work with us</a></li>
                 </div>
-                <div id="user-area">
-                    <div id="user-info">
+                <div id="userarea">
+                    <div id="userinfo">
                         <span>Username</span>
                         <div id="user-dropdown">
-                            <button id="dropdown-btn">userid<img /></button>
+                            <button type="button" id="dropdown-btn">ef34fsfsf4gghtes<i class="fa-solid fa-chevron-down" style="color: #7873a7; margin-left: 5px;"></i></button>
                             <div id="dropdown-content">
                                 <li><a href="">Profile</a></li>
                                 <li><a href="">Account</a></li>
@@ -91,14 +265,13 @@
                                 <li><a href="">Logout</a></li>
                             </div>
                         </div>
-                        <img id="user-image">
                     </div>
+                    <img id="user-image" src="./assets/user-avatar.png" height="50px">
                 </div>
             </header>
 
             <main>
                 <section id="music-page">
-                    
                     <hero>
                         <img />
                         <h3>Trending new hits</h3>
@@ -137,23 +310,203 @@
 
                 </section>
                 <aside>
-                    <h4>Hot Boosts</h4>
-                    <div class="song-profile"></div>
-                    <div class="song-profile"></div>
-                    <div class="song-profile"></div>
-                    <div class="song-profile"></div>
-                    <div class="song-profile"></div>
-                    <div class="song-profile"></div>
-                    <div class="song-profile"></div>
+                    <div id="song-list">
+                        <h4>Hot Boosts</h4>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="song-list-item">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg">
+                                <div>
+                                    <p>Song name</p>
+                                    <span>Song artist</span>
+                                </div>
+                            </div>
+                            <div id="play-btn">
+                                <span id="circle" >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </aside>
             </main>
         </section>
     </section>
     <footer>
-        <section id="song-profile">
-            <img />
-            <p>Song Name</p>
-            <span>Artist Name</span>
+        <section class="song-profile">
+            <img src="./assets/song-label.jpeg">
+            <div>
+                <p>Song name</p>
+                <span>Song artist</span>
+            </div>
         </section>
         <section id="music-player">
             <audio controls></audio>
@@ -163,5 +516,6 @@
             <input type="range">
         </section>
     </footer>
+    <script src="https://kit.fontawesome.com/8f0621450a.js" crossorigin="anonymous"></script>
 </body>
 </html>
