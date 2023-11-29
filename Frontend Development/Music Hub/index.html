@@ -176,10 +176,12 @@
         .song-profile p {
             color: #c5c2e1;
             font-size: 15px;
+            white-space: nowrap;
         }
         .song-profile span {
             color:#9591bd;
             font-size: 10px;
+            white-space: nowrap;
         }
         main aside::-webkit-scrollbar {
             width: 7px;
@@ -211,6 +213,92 @@
             background:#7873a7;
             border-radius: 10px;
         }
+
+        main #music-page {
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            width: 74%;
+            position: relative;
+            align-items: stretch;
+            overflow-y: scroll;
+        }
+        main #hero {
+            background-image: linear-gradient(120deg, #2f2b45,#3c3857,#7873a7,#9d97d4);
+            padding: 5%;
+            border-radius: 15px;
+            position: relative;
+        }
+        main #hero img {
+            position: absolute;
+            height: 20vw;
+            bottom: 0;
+            right: 0;
+        }
+        main #hero h3 {
+            font-size: 20px;
+            font-weight:normal;
+        }
+        main #hero h1 {
+            font-size: 30px;
+            padding: 20px 0px;
+        }
+        main #hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        main #hero #cta button:first-of-type {
+            background-color: white;
+            color: #1d1b2d;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        main #hero #cta button:nth-of-type(2) {
+            margin-left: 15px;
+            padding: 10px 11px;
+            background-color: transparent;
+            border: 1px solid #cec9f5;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        main .section-list {
+            margin: 30px 0px;
+            position: relative;
+        }
+        main .section-list h4 {
+            position: relative;
+        }
+        main .section-list a {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        main .section-list .list-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        main #list-item {
+            position: relative;
+        }
+        main #list-item p {
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+        main #list-item span {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
 
     </style>
 </head>
@@ -272,26 +360,42 @@
 
             <main>
                 <section id="music-page">
-                    <hero>
-                        <img />
+                    <div id="hero">
+                        <img src="./assets/hero-img.png"/>
                         <h3>Trending new hits</h3>
                         <h1>Break the Heart</h1>
                         <h2>Dua Lipa</h2>
                         <div id="cta">
                             <button>Listen Now</button>
-                            <button><img /></button>
+                            <button><i class="fa-solid fa-heart"></i></button>
                         </div>
-                    </hero>
+                    </div>
 
                     <div class="section-list">
                         <h4>Top Artists</h4>
                         <a href="">See all</a>
                         <div class="list-items">
                             <div id="list-item">
-                                <img />
+                                <img src="./assets/song-label.jpeg" />
                                 <p>Artist name</p>
                                 <span>views</span>
                             </div>
+                            <div id="list-item">
+                                <img src="./assets/song-label.jpeg" />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                            <div id="list-item">
+                                <img src="./assets/song-label.jpeg" />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                            <div id="list-item">
+                                <img src="./assets/song-label.jpeg" />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -300,7 +404,22 @@
                         <a href="">See all</a>
                         <div class="list-items">
                             <div id="list-item">
-                                <img />
+                                <img src="./assets/song-label.jpeg" />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                            <div id="list-item">
+                                <img src="./assets/song-label.jpeg" />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                            <div id="list-item">
+                                <img src="./assets/song-label.jpeg" />
+                                <p>Artist name</p>
+                                <span>views</span>
+                            </div>
+                            <div id="list-item">
+                                <img src="./assets/song-label.jpeg" />
                                 <p>Artist name</p>
                                 <span>views</span>
                             </div>
