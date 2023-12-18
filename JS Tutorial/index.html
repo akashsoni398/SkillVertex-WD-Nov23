@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Tutorial</title>
+    <script type="text/javascript">
+        //javascript content - functional components
+        document.cookie;
+
+        function myfunc() {
+            document.getElementById('para').innerText = "This is Javascript";
+        }
+
+        let myfunc2 = () => {
+            document.getElementById('para').innerText = "This is Javascript";
+        }
+    </script>
+    <script src="external.js"></script>
+</head>
+<body>
+    <p id="para">This is a JS Tutorial</p>
+    <input type="text" id="name"/>
+    <button id="btn">Click!</button>
+    <script src="external.js"></script>
+    <script language="javascript">
+/*
+        //javascript content
+
+        // fundamentals of programming
+            // data storage - data types
+                let condition;
+                if(condition) {
+                    var v = "var keyword - global scope";
+                    let l = "let keyword - block scope";
+                    const c = "const keyword - block scope";
+                }
+                
+
+                var x;           // declaration
+                x = 243244;      // initialization
+
+                
+                let int = 324324;                             // integer/number
+                let real = 4424234.442;                       // fload/real/double
+                let string = "value inside quotation";        // string
+                let intasstr = "324324";                       // string
+                let boolean = true;                           // boolean
+
+                let undef;                                // undefined
+                let empty = "";                               // empty
+
+                let array = [24234,"sadadasd",true];          // index-value array
+                
+                let studentDB = {                             // objects
+                    student1: {
+                        rollno: 43,
+                        name: {
+                            firstname:"Akash",
+                            middlename:"",
+                            lastname: "Soni"
+                        },
+                        dob:"1998-04-23",
+                        contactinfo: 434345345,
+                        fullname: function() {
+                            return this.name.firstname+this.name.middlename+this.name.lastname;
+                        },
+                        age: function() {
+
+                        }
+
+                    },
+                    student2: {
+
+                    },
+                    student3: {
+
+                    }
+
+                }
+
+
+            // input/output
+
+                // user input - through forms and events
+
+                document.getElementById("btn").addEventListener("click",function() {
+                    let name = document.getElementById("name").value;
+                    document.getElementById("para").innerText = "Hello "+name;
+                });
+                document.getElementById("btn").addEventListener("dblclick",function() {
+
+                });
+
+
+                // client-side output
+
+                document.getElementById("para").innerHTML = "<H1>Hi There!</h1>";
+                document.getElementById("para").innerText = "<H1>Hi There!</h1>";
+                document.getElementById("name").value = "Default value";
+               
+                document.write("Some content from JS");
+
+                console.log("Log message from JS");
+                console.error("Error message from JS");
+
+                window.alert("This is an alert message");
+                let prompt=window.prompt("Are you sure? Enter 'yes' to confirm");
+                let confirm = window.confirm("Are you sure?");
+
+                window.print();
+
+
+
+            // operators
+                // arithmetic operators - (+,-,*,/,%,++,--)
+                // comparison operators - (>,>,>=,<=,==,===,!=)
+                // logical operators - (&&, || , not )
+                // conditional operator - (condition) ? true stmts : false stmts;
+                (x>y) ? document.write("X is greater") : document.write("X is not greater than y");
+                // nullish coelesing operator - ??
+                let x;
+                let z = "abc";
+                let y = x ?? "default";
+                // assignment operator  - (=, +=, -=, *=, /= %=)
+                let a = 34; a=a+10;  a+=10;
+
+            // branching - if statement, if...else stmt, if...else if...else stmt, switch case
+                let age = 24;
+                
+                
+                if(age>=18) {
+                    document.write("eligible to vote");
+                }
+
+                
+                if(age>=18) {
+                    document.write("Eligible to vote");
+                } 
+                else {
+                    document.write("Not eligible to vote");
+                }
+                
+
+                if(age>=18 && vid==true) {
+                    document.write("Eligible to vote");
+                }
+                else if(age>18 && vid==false) {
+                    document.write("Eligible to vote after registration as voter");
+                }
+                else if(age<18) {
+                    document.write("Not eligible to vote");
+                }
+                else {
+                    document.write("Input not in range");
+                }
+
+
+                let grade = "B";
+                switch(grade) {
+                    case 'A+': 
+                        document.write("Marks in the range of 95 to 100");
+                        break;
+                    case 'A': 
+                        document.write("Marks in the range of 85 to 94");
+                        break;
+                    case 'B+': 
+                        document.write("Marks in the range of 75 to 84");
+                        break;
+                    case 'B': 
+                        document.write("Marks in the range of 65 to 74");
+                        break;
+                    case 'C': 
+                        document.write("Marks in the range of 55 to 64");
+                        break;
+                    case 'D': 
+                        document.write("Marks in the range of 40 to 55");
+                        break;
+                    case 'F': 
+                        document.write("Marks below 40");
+                        break;
+                    default:
+                        document.write("Grade is wrong");
+                }
+
+            // looping - while loop, do...while loop, for loop, for...in/for...of loop
+                
+                let x = 0;
+                while(x<=30) {
+                    if(x%2==0) {
+                        console.log(x);
+                    }
+                    x++;
+                }
+
+
+                for(let y=100; y>=50; y--) {
+                    if(y%2==0) {
+                        console.log(y);
+                    }
+                }
+
+
+                let z=50;
+                do {
+                    if(z%2==0) {
+                        console.log(z);
+                    }
+                    z++;
+                }
+                while(z<=100);
+*/
+
+                let studentDB = {                             // objects
+                    student1: {
+                        rollno: 43,
+                        name: {
+                            firstname:"Akash",
+                            middlename:"",
+                            lastname: "Soni"
+                        },
+                        dob:"1998-04-23",
+                        contactinfo: 434345345,
+                        fullname: function() {
+                            return this.name.firstname+this.name.middlename+this.name.lastname;
+                        }
+                    },
+                    student2: {
+                        rollno: 43,
+                        name: {
+                            firstname:"Akash",
+                            middlename:"",
+                            lastname: "Soni"
+                        },
+                        dob:"1998-04-23",
+                        contactinfo: 434345345,
+                        fullname: function() {
+                            return this.name.firstname+this.name.middlename+this.name.lastname;
+                        }
+                    }
+                }
+
+
+                for(let value in studentDB.student1) {        // keys in object
+                    console.log(value +':'+ studentDB.student1[value]);
+
+                }
+
+                for(let value in studentDB.student1) {        // values of keys in object
+                    console.log(studentDB.student1[value]);
+                }
+
+
+                let array = [3543545,"wwfscsd",true,false]
+
+                for(let value of array) {
+                    console.log(value);
+                }
+
+            // control statements - continue, break
+
+
+                for(let y=100; y>=50; y--) {
+                    if(y%2==0) {
+                        continue;
+                    }
+                    console.log(y);
+                }
+
+                for(let y=100; y>=50; y--) {
+                    if(y==87) {
+                        break;
+                    }
+                    console.log(y);
+                }
+
+
+            // functions
+                function calc(a,b) {
+                    return a+b;
+                }
+
+                let calc = (a,b) => {
+                    return a+b;
+                }
+
+                let sum = calc(10,'20');
+
+
+                
+
+    </script>
+</body>
+</html>
